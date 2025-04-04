@@ -1,0 +1,15 @@
+# Solicitar al usuario que ingrese el número de segundos
+total_segundos = int(input("Ingrese el número de segundos: "))
+
+# Calcular los días, horas, minutos y segundos
+dias = total_segundos // 86400  # 1 día = 86400 segundos
+resto_segundos = total_segundos % 86400
+
+horas = resto_segundos // 3600  # 1 hora = 3600 segundos
+resto_segundos = resto_segundos % 3600
+
+minutos = resto_segundos // 60  # 1 minuto = 60 segundos
+segundos = resto_segundos % 60
+
+# Mostrar el resultado en el formato D:HH:MM:SS
+print(f"{dias}:{horas:02}:{minutos:02}:{segundos:02}")
