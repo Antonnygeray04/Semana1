@@ -1,0 +1,26 @@
+# Preguntar al usuario por el sistema de unidades que está usando
+sistema_unidades = input("Ingresa el sistema de unidades (imperial/métrico): ").lower()
+
+# Comprobar qué sistema de unidades ha elegido el usuario y proceder en consecuencia
+if sistema_unidades == 'imperial':
+    # Leer la altura en pulgadas y el peso en libras
+    altura = float(input("Ingresa tu altura en pulgadas: "))
+    peso = float(input("Ingresa tu peso en libras: "))
+    
+    # Calcular el IMC usando la fórmula imperial
+    imc = (peso / (altura * altura)) * 703
+
+elif sistema_unidades == 'métrico':
+    # Leer la altura en metros y el peso en kilogramos
+    altura = float(input("Ingresa tu altura en metros: "))
+    peso = float(input("Ingresa tu peso en kilogramos: "))
+    
+    # Calcular el IMC usando la fórmula métrica
+    imc = peso / (altura * altura)
+
+else:
+    print("Sistema de unidades inválido. Por favor, elige 'imperial' o 'métrico'.")
+    exit()
+
+# Mostrar el resultado del IMC
+print(f"Tu Índice de Masa Corporal (IMC) es: {imc:.2f}")
